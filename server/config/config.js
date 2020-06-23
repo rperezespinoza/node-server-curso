@@ -22,6 +22,10 @@ process.env.CADUCIDAD_TOKEN = "7d" //60 * 60 * 24 * 30;
 // ==========================
 process.env.SEED = process.env.SEED || 'este-es-el-seed-desarrollo';
 
+// ==========================
+// CLIENT_ID de google sign
+// ==========================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '971060927455-889doem7vgh3djfv6u411tvk4fa1ih0h.apps.googleusercontent.com';
 
 // ==========================
 // CADENA DE CONEXIÓN
