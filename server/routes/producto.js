@@ -139,7 +139,6 @@ app.put('/producto/:id', verificaToken, (req, res) => {
          descripcion: productoBody.descripcion,
          categoria: productoBody.categoria,
      });*/
-    console.log(producto);
 
     Producto.findOneAndUpdate({ _id: id }, producto, { new: true, runValidators: true }, (err, productoDB) => {
 
