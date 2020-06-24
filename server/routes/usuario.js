@@ -63,7 +63,7 @@ app.post('/usuario', [verificaToken, verificaAdmin_Role], (req, res) => {
     })
 })
 
-app.put('/usuario/:id', verificaToken, (req, res) => {
+app.put('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
     let id = req.params.id;
     let campos = ['nombre', 'email', 'img ', 'role', 'estado'];
     let body = _.pick(req.body, campos);
@@ -85,7 +85,7 @@ app.put('/usuario/:id', verificaToken, (req, res) => {
     });
 })
 
-app.delete('/usuario/:id', verificaToken, (req, res) => {
+app.delete('/usuario/:id', [verificaToken, verificaAdmin_Role], (req, res) => {
 
     let id = req.params.id;
     let campos = ['estado'];
